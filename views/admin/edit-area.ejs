@@ -1,0 +1,57 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/area.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="area-form" action="/admin/<% if (editing) { %>edit-area<% } else { %>add-area<% } %>" method="POST">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<% if (editing) { %><%= area.name %><% } %>" required autocomplete="off" <% if(editing){ %> readonly <% } %>>
+            </div>
+            <div class="form-control">
+                <label for="imageurl">Image URL</label>
+                <input type="text" name="imageurl" id="imageurl" value="<% if (editing) { %><%= area.imgurl %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="pincode">Pincode</label>
+                <input type="number" name="pincode" id="pincode" value="<% if (editing) { %><%= area.pincode %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="type">Soil Type</label>
+                <input type="text" name="type" id="type" value="<% if (editing) { %><%= soil.type %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="c_amt">Soil Carbon %</label>
+                <input type="number" name="c_amt" id="c_amt" step=".01" value="<% if (editing) { %><%= soil.c_amt %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="n_amt">Soil Nitrogen %</label>
+                <input type="number" name="n_amt" id="n_amt" step=".01" value="<% if (editing) { %><%= soil.n_amt %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="p_amt">Soil Potassium %</label>
+                <input type="number" name="p_amt" id="p_amt" step=".01" value="<% if (editing) { %><%= soil.p_amt %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="php_amt">Soil Phosphorous %</label>
+                <input type="number" name="php_amt" id="php_amt" step=".01" value="<% if (editing) { %><%= soil.php_amt %><% } %>" required>
+            </div>
+            <div class="form-control">
+                <label for="ph_lvl">Soil pH Level %</label>
+                <input type="number" name="ph_lvl" id="ph_lvl" step=".01" value="<% if (editing) { %><%= soil.ph_lvl %><% } %>" required>
+            </div>
+            
+
+            <% if (editing) { %>
+                <input type="hidden" value="<%= area.id %>" name="areaId">
+                <input type="hidden" value="<%= soil.soilId %>" name="soilId">
+            <% } %>
+
+            <button class="btn" type="submit"><% if (editing) { %>Update Area<% } else { %>Add Area<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>

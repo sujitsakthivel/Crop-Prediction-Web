@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= area.name %></h1>
+            <hr>
+            <div>
+                <img src="<%= area.imgurl %>" alt="<%= area.name %>">
+            </div>
+            <div>
+                <h3>PINCODE: <%= area.pincode %></h3>
+                <!-- <h3>SOIL DETAILS: YET TO ADD...</h3> -->
+                <h3>WEATHER DETAILS: </h3>
+                <ul>
+                    <p>Temperature: <%= weather.temperature %> Celsius</p>
+                    <p>Pressure: <%= weather.pressure %> mbar </p>
+                    <p>Humidity: <%= weather.humidity %> percent</p>
+                    <p>Rainfall: <%= weather.rainfall %> mm</p>
+                </ul>
+            </div>
+        </main>
+        <%- include('../includes/end.ejs') %>

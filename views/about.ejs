@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <title>About</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- //custom-theme -->
+    <link
+      href="css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- //font-awesome-icons -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="icon" href="icons/sprout.png" />
+  </head>
+
+  <body>
+    <!-- banner -->
+    <!-- <div class="banner1">
+      <div class="container">
+        <div class="w3_agileits_banner_main_grid">
+          <div class="w3_agile_logo">
+            <h1>
+              <a href="/"><span>P</span>lantech Solutions<i>Plant smart</i></a>
+            </h1>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div> -->
+    <!-- banner -->
+    <!---728x90--->
+
+    <!-- bootstrap-pop-up -->
+    <div
+      class="modal video-modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModal"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            Functionalities of our system
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <section>
+            <div class="modal-body">
+              <img src="images/4.jpg" alt=" " class="img-responsive" />
+                <p>Suitable Crops based on soil nutrients are shown</p>
+                <p>Area management including soil and weather details</p>
+                <p>If more than one crop is suitable for the given condition, all possible crops will be shown to you.</p>
+                <p>Statistics, both individually and globally are displayed on their respective pages</p>
+                <p>Farmers can choose their preferred crop based on compatibility</p>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- //bootstrap-pop-up -->
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="w3layouts_breadcrumbs_left">
+          <ul>
+            <li>
+              <i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a
+              ><span>/</span>
+            </li>
+            <li><i class="fa fa-info-circle" aria-hidden="true"></i>About</li>
+          </ul>
+        </div>
+        <div class="w3layouts_breadcrumbs_right">
+          <h2>About Us</h2>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //breadcrumbs -->
+    <!---728x90--->
+
+    <!-- about -->
+    <div class="welcome">
+      <div class="container">
+        <h3 class="agileits_w3layouts_head">Why <span>Choose</span> Us</h3>
+        <div class="w3_agile_image">
+          <img src="images/107.png" alt=" " class="img-responsive" />
+        </div>
+        <p class="agile_para">
+          Look at our statistics of the crops requested by all the people using
+          our system
+        </p>
+        <div class="w3ls_news_grids">
+          <!-- <div class="col-md-6 w3_agile_about_grid_left">
+            <h3>
+              Pellentesque a ligula nec dui ornare pulvinar in non sem
+              condimentum erat
+            </h3>
+            <p>
+              <i
+                >In eleifend nisl fermentum bibendum euismod. Pellentesque ac mi
+                quis tortor consequat scelerisque.</i
+              >
+              Sed eros urna, rhoncus nec tortor quis, pretium vestibulum purus.
+              Nunc quis augue nibh. Proin non enim non nulla scelerisque
+              scelerisque vitae non est. Quisque iaculis leo at lacus malesuada
+              mattis.
+            </p>
+          </div> -->
+          <div
+            class="chart-container"
+            style="
+              position: relative;
+              height: 400px;
+              width: 800px;
+              margin: auto;
+            "
+          >
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- //about -->
+    <!---728x90--->
+
+    <!-- skills -->
+    <script src="js/skill.bars.jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".skillbar").skillBars({
+          from: 0,
+          speed: 4000,
+          interval: 100,
+          decimals: 0,
+        });
+      });
+    </script>
+    <!-- //skills -->
+    <!-- about-bottom -->
+    <div class="about-bottom">
+      <div class="container">
+        <h3>
+          <span>Agriculture</span> not only gives riches to a nation, but the
+          only riches she can call her own
+        </h3>
+        <div
+          class="agileits_w3layouts_learn_more agileits_learn_more hvr-radial-out"
+        >
+          <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- //about-bottom -->
+    <!-- team -->
+    <div class="welcome">
+      <div class="container">
+        <h3 class="agileits_w3layouts_head">
+          Meet Our <span>Amazing</span> Team
+        </h3>
+        <div class="w3_agile_image">
+          <img src="images/107.png" alt=" " class="img-responsive" />
+        </div>
+        <p class="agile_para">
+          Look at the people behind the development of this system
+        </p>
+        <div class="w3ls_news_grids w3_agileits_team_grids">
+          <div class="col-md-3 w3_agileits_team_grid">
+            <div class="w3layouts_news_grid">
+              <img src="images/10.jpg" alt=" " class="img-responsive" />
+              <div class="w3layouts_news_grid_pos">
+                <div class="wthree_text agileinfo_about_text"></div>
+              </div>
+            </div>
+            <h4>Sai Satvik</h4>
+            <p>CB.EN.U4CSE19410</p>
+          </div>
+          <div class="col-md-3 w3_agileits_team_grid">
+            <div class="w3layouts_news_grid">
+              <img src="images/11.jpg" alt=" " class="img-responsive" />
+              <div class="w3layouts_news_grid_pos">
+                <div class="wthree_text agileinfo_about_text"></div>
+              </div>
+            </div>
+            <h4>Arvind</h4>
+            <p>CB.EN.U4CSE19411</p>
+          </div>
+          <div class="col-md-3 w3_agileits_team_grid">
+            <div class="w3layouts_news_grid">
+              <img src="images/12.jpg" alt=" " class="img-responsive" />
+              <div class="w3layouts_news_grid_pos">
+                <div class="wthree_text agileinfo_about_text"></div>
+              </div>
+            </div>
+            <h4>Divesh</h4>
+            <p>CB.EN.U4CSE19422</p>
+          </div>
+          <div class="col-md-3 w3_agileits_team_grid">
+            <div class="w3layouts_news_grid">
+              <img src="images/13.jpg" alt=" " class="img-responsive" />
+              <div class="w3layouts_news_grid_pos">
+                <div class="wthree_text agileinfo_about_text"></div>
+              </div>
+            </div>
+            <h4>Sujit</h4>
+            <p>CB.EN.U4CSE19456</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- //team -->
+    <!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="w3agile_footer_grids">
+          <div class="col-md-3 agileinfo_footer_grid">
+            <div class="agileits_w3layouts_footer_logo">
+              <h2>
+                <a href="index.html"
+                  ><span>P</span>lantech Solutions<i>Plant smart</i></a
+                >
+              </h2>
+            </div>
+          </div>
+          <div class="col-md-4 agileinfo_footer_grid">
+            <h3>Contact Info</h3>
+            <h4>Call Us <span>+123 456 7890</span></h4>
+            <p>Plantech Solutions, 123 XYZ Road <span>ABCD EFGH.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //footer -->
+    <!-- menu -->
+    <!-- //menu -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $("html,body").animate(
+            { scrollTop: $(this.hash).offset().top },
+            1000
+          );
+        });
+      });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+        $().UItoTop({ easingType: "easeOutQuart" });
+      });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <% var dataset = data; %> <% var crops = stats; %>
+    <script>
+          //var cropNames = document.getElementById('mydiv1').dataset.test;
+          //var dataValues = document.getElementById('mydiv2').dataset.test;
+          var cropNames = <%- JSON.stringify(crops); %>
+          var dataValues= <%- JSON.stringify(dataset); %>
+          //console.log(cropNames);
+          //console.log(dataValues);
+          var ctx = document.getElementById("myChart").getContext("2d");
+          var bgColors = [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 159, 64, 0.2)",
+          ];
+          var bColors = [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+          ];
+          var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: cropNames,
+              datasets: [{
+                  label: 'Plant statistics',
+                  data: dataValues,
+                  backgroundColor: bgColors,
+                  borderColor: bColors,
+                  borderWidth: 2
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+    </script>
+  </body>
+</html>

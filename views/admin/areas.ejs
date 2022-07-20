@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/area.css">
+</head>
+
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+      <% if (arr.length > 0) { %>
+      <div class="grid">
+        <% for (let area of arr) { %>
+        <article class="card area-one">
+          <header class="card__header">
+            <h1 class="area-name"><%= area.name %></h1>
+          </header>
+          <div class="card__image">
+            <img src="<%= area.imgurl %>" alt="<%= area.name %>" />
+          </div>
+          <div class="card__content">
+            <h3 class="area-pincode">PINCODE: <%= area.pincode %></h3>
+          </div>
+          <div class="card__actions">
+            <a href="/admin/edit-area/<%= area.id %>?edit=true" class="btn"
+              >Edit</a
+            >
+            <form action="/admin/delete-area" method="POST">
+              <input type="hidden" value="<%= area.id %>" name="areaId" />
+              <button class="btn" type="submit">Delete</button>
+            </form>
+          </div>
+        </article>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h1>No Areas Found!</h1>
+      <% } %>
+    </main>
+    <%- include('../includes/end.ejs') %>
+  </body>
+</html>

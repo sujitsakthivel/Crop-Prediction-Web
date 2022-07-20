@@ -1,0 +1,65 @@
+<%- include('../includes/head.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <div
+      class="chart-container"
+      style="position: relative; height: 600px; width: 1000px; margin: auto; margin-top: 70px"
+    >
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>
+  <!-- <div id="mydiv1" data-test=<%# data %>></div> -->
+  <!-- <div id="mydiv2" data-test=<%# stats %>></div> -->
+  <% var dataset = data; %>
+  <% var crops = stats; %>
+  <script>
+    //var cropNames = document.getElementById('mydiv1').dataset.test;
+    //var dataValues = document.getElementById('mydiv2').dataset.test;
+    var cropNames = <%- JSON.stringify(crops); %>
+    var dataValues= <%- JSON.stringify(dataset); %>
+    //console.log(cropNames);
+    //console.log(dataValues);
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var bgColors = [
+      "rgba(255, 99, 132, 0.2)",
+      "rgba(54, 162, 235, 0.2)",
+      "rgba(255, 206, 86, 0.2)",
+      "rgba(75, 192, 192, 0.2)",
+      "rgba(153, 102, 255, 0.2)",
+      "rgba(255, 159, 64, 0.2)",
+    ];
+    var bColors = [
+      "rgba(255, 99, 132, 1)",
+      "rgba(54, 162, 235, 1)",
+      "rgba(255, 206, 86, 1)",
+      "rgba(75, 192, 192, 1)",
+      "rgba(153, 102, 255, 1)",
+      "rgba(255, 159, 64, 1)",
+    ];
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: cropNames,
+        datasets: [{
+            label: 'Plant statistics',
+            data: dataValues,
+            backgroundColor: bgColors,
+            borderColor: bColors,
+            borderWidth: 2
+        }]
+    },
+    options: {
+    	responsive: true,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+</html>

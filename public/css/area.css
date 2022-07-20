@@ -1,0 +1,29 @@
+.area-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.area-one {
+  width: 20rem;
+  max-width: 95%;
+  margin: 1rem;
+}
+
+.area-name {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.area-pincode {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+}
+
+/* TO DO */
+
+/* .soil-conditions {
+
+} */

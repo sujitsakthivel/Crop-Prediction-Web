@@ -1,0 +1,62 @@
+<div class="backdrop"></div>
+<header class="main-header">
+  <button id="side-menu-toggle">Menu</button>
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <li class="main-header__item">
+        <a class="<%= path === '/area' ? 'active' : '' %>" href="/area"
+          >Areas</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/admin/add-area' ? 'active' : '' %>"
+          href="/admin/add-area"
+          >Add Area
+        </a>
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/admin/areas' ? 'active' : '' %>"
+          href="/admin/areas"
+          >Manage Areas
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="dropdown user" style="float: right">
+    <img src="/icons/user.png" alt="" />
+    <button class="dropbtn"><%= username %></button>
+    <div class="dropdown-content">
+      <!-- <a href="/edit-profile">Edit Profile</a> -->
+      <a href="/statistics">View Stats</a>
+      <a href="/logout">Logout </a>
+    </div>
+  </div>
+  <!-- <div class="user">
+    <img src="/icons/user.png" alt="" />
+    <p style="display: inline-block"><%# userid %></p>
+  </div> -->
+</header>
+
+<nav class="mobile-nav">
+  <ul class="mobile-nav__item-list">
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/area' ? 'active' : '' %>" href="/area">Area</a>
+    </li>
+    <li class="mobile-nav__item">
+      <a
+        class="<%= path === '/admin/add-area' ? 'active' : '' %>"
+        href="/admin/add-area"
+        >Add Area
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a
+        class="<%= path === '/admin/areas' ? 'active' : '' %>"
+        href="/admin/areas"
+        >Manage Areas
+      </a>
+    </li>
+  </ul>
+</nav>
